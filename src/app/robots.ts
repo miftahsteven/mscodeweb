@@ -7,6 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://mscode.id/sitemap.xml',
+    sitemap: [
+      'https://mscode.id/sitemap.xml',
+      'https://mscode.co.id/sitemap.xml',
+    ],
   }
 }
