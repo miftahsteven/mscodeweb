@@ -11,7 +11,7 @@ export default function Header() {
     { name: "Home", href: "#home" },
     { name: "Produk", href: "#products" },
     { name: "Layanan", href: "#services" },
-    { name: "Harga", href: "#pricing" },
+    { name: "Klien", href: "#clients" },
     { name: "Tentang MSCODE", href: "#about" },
   ];
 

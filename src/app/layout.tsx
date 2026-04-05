@@ -13,8 +13,75 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MSCODE - Solusi Teknologi & Informasi",
-  description: "Layanan pengembangan software, aplikasi mobile, dan integrasi AI terpercaya.",
+  title: {
+    default: "MSCODE - Jasa Pembuatan Website & Aplikasi Mobile Professional",
+    template: "%s | MSCODE"
+  },
+  description: "MSCODE adalah software house profesional di Jabodetabek & Yogyakarta. Kami melayani jasa pembuatan website, aplikasi mobile (Android/iOS), sistem informasi enterprise, dan integrasi AI.",
+  keywords: [
+    "pengembang software jabodetabek",
+    "software house yogyakarta",
+    "jasa pembuatan website bogor",
+    "jasa pembuatan aplikasi mobile",
+    "pengembangan sistem informasi",
+    "mscode indonesia",
+    "mscode inovasi digital",
+    "pengembang aplikasi android ios",
+    "integrasi ai indonesia"
+  ],
+  authors: [{ name: "MSCODE" }],
+  creator: "MSCODE",
+  publisher: "PT. MSCODE INOVASI DIGITAL",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://mscode.id"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "id-ID": "/id",
+    },
+  },
+  openGraph: {
+    title: "MSCODE - Jasa Pembuatan Website & Aplikasi Mobile Professional",
+    description: "Software house profesional melayani jasa pembuatan website, aplikasi mobile, dan sistem informasi di Jabodetabek & Yogyakarta.",
+    url: "https://mscode.id",
+    siteName: "MSCODE",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+        alt: "MSCODE Logo",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MSCODE - Jasa Pembuatan Website & Aplikasi Mobile Professional",
+    description: "Software house profesional melayani jasa pembuatan website, aplikasi mobile, dan sistem informasi.",
+    images: ["/logo.png"],
+  },
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -24,6 +91,51 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "PT. MSCODE INOVASI DIGITAL",
+              "image": "https://mscode.id/logo.png",
+              "@id": "https://mscode.id",
+              "url": "https://mscode.id",
+              "telephone": "+628558833244",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Bogor",
+                "addressLocality": "Bogor",
+                "addressRegion": "Jawa Barat",
+                "postalCode": "16111",
+                "addressCountry": "ID"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -6.5971,
+                "longitude": 106.7949
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "09:00",
+                "closes": "17:00"
+              },
+              "sameAs": [
+                "https://mscode.id"
+              ],
+              "description": "Software house profesional melayani jasa pembuatan website, aplikasi mobile, dan sistem informasi di Jabodetabek & Yogyakarta."
+            })
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

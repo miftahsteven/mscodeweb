@@ -3,8 +3,8 @@ import React from "react";
 export default function Services() {
   const services = [
     {
-      title: "Sistem Informasi",
-      description: "Kami membangun sistem informasi perusahaan yang handal, scalable, dan secure untuk optimalisasi proses bisnis Anda.",
+      title: "Scalable Web App",
+      description: "Kami membangun Aplikasi perusahaan yang handal, scalable, dan secure untuk optimalisasi proses bisnis Anda.",
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -13,7 +13,7 @@ export default function Services() {
     },
     {
       title: "Mobile App Development",
-      description: "Pengembangan aplikasi mobile native (Android & iOS) dengan performa tinggi dan user experience yang memukau.",
+      description: "Pengembangan aplikasi mobile native (Android & iOS) dengan performa tinggi dan Kami memprioritaskan User Experience.",
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
