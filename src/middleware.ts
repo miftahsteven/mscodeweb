@@ -4,20 +4,27 @@ import type { NextRequest } from 'next/server'
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone()
   const hostname = request.headers.get('host')
-
-  // Define the primary domain
-  const primaryDomain = 'mscode.id'
-
-  // Standard paths to exclude from redirection (SEO files)
   const pathname = request.nextUrl.pathname
-  if (pathname === '/robots.txt' || pathname === '/sitemap.xml') {
+
+  // DEPLOYMENT CHECK: Ensure this code is on the branch that powers your live site.
+  
+  // 1. Static files and Next.js internal paths should NEVER be redirected
+  if (
+    pathname.startsWith('/_next') ||
+    pathname.startsWith('/api') ||
+    pathname.includes('.') || // Matches files with extensions (favicon.ico, image.png, etc.)
+    pathname === '/robots.txt' ||
+    pathname === '/sitemap.xml'
+  ) {
     return NextResponse.next()
   }
 
-  // If the hostname is not the primary domain (e.g., mscode.co.id or www versions)
+  // 2. Define the primary domain
+  const primaryDomain = 'mscode.id'
+
+  // 3. If the hostname is not the primary domain (e.g., mscode.co.id or www versions)
   if (hostname && hostname !== primaryDomain) {
     url.hostname = primaryDomain
-    // Preserve protocol if possible, or force https
     url.protocol = 'https'
     return NextResponse.redirect(url, 301)
   }
@@ -25,17 +32,12 @@ export function middleware(request: NextRequest) {
   return NextResponse.next()
 }
 
-// See "Matching Paths" below to learn more
 export const config = {
   matcher: [
     /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     * - logo.png, etc (static assets in public)
+     * Match all request paths for domain redirection logic.
+     * Exclusions are handled inside the middleware function for better precision.
      */
-    '/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)',
+    '/:path*',
   ],
 }
