@@ -39,22 +39,22 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://mscode.id"),
   alternates: {
-    canonical: "/",
+    canonical: "https://mscode.id/",
     languages: {
-      "id-ID": "/id",
+      "id-ID": "https://mscode.id/",
     },
   },
   openGraph: {
     title: "MSCODE - Jasa Pembuatan Website & Aplikasi Mobile Professional",
     description: "Software house profesional melayani jasa pembuatan website, aplikasi mobile, dan sistem informasi di Jabodetabek & Yogyakarta.",
     url: "https://mscode.id",
-    siteName: "MSCODE",
+    siteName: "MSCODE Inovasi Digital",
     images: [
       {
         url: "/logo.png",
-        width: 800,
-        height: 600,
-        alt: "MSCODE Logo",
+        width: 1200,
+        height: 630,
+        alt: "MSCODE Logo - Jasa Pembuatan Website & Aplikasi",
       },
     ],
     locale: "id_ID",
@@ -129,7 +129,9 @@ export default function RootLayout({
                 "closes": "17:00"
               },
               "sameAs": [
-                "https://mscode.id"
+                "https://mscode.id",
+                "https://www.instagram.com/mscode.id",
+                "https://www.linkedin.com/company/mscode-indonesia"
               ],
               "description": "Software house profesional melayani jasa pembuatan website, aplikasi mobile, dan sistem informasi di Jabodetabek & Yogyakarta."
             })
