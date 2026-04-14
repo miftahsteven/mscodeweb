@@ -132,7 +132,7 @@ export default function RootLayout({
               "sameAs": [
                 "https://mscode.id",
                 "https://www.instagram.com/mscode.id",
-                "https://www.linkedin.com/company/mscode-indonesia"
+                "https://www.linkedin.com/in/miftahsteven/"
               ],
               "description": "Software house profesional melayani jasa pembuatan website, aplikasi mobile, dan sistem informasi di Jabodetabek & Yogyakarta."
             })
