@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "MSCODE - Jasa Pembuatan Website & Aplikasi Mobile Professional",
+    default: "MSCODE - Membangun Sistem & Aplikasi Mobile Professional",
     template: "%s | MSCODE"
   },
   description: "MSCODE adalah software house profesional di Jabodetabek & Yogyakarta. Kami melayani jasa pembuatan website, aplikasi mobile (Android/iOS), sistem informasi enterprise, dan integrasi AI.",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "MSCODE - Jasa Pembuatan Website & Aplikasi Mobile Professional",
+    title: "MSCODE - Membangun Sistem & Aplikasi Mobile Professional",
     description: "Software house profesional melayani jasa pembuatan website, aplikasi mobile, dan sistem informasi di Jabodetabek & Yogyakarta.",
     url: "https://mscode.id",
     siteName: "MSCODE Inovasi Digital",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MSCODE - Jasa Pembuatan Website & Aplikasi Mobile Professional",
+    title: "MSCODE - Membangun Sistem & Aplikasi Mobile Professional",
     description: "Software house profesional melayani jasa pembuatan website, aplikasi mobile, dan sistem informasi.",
     images: ["/logo.png"],
   },
